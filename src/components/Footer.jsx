@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-4">
               <img
-                src="src\data\logo\NxtHyre-Logo1.jpg"
+                src="/logo/NxtHyre-Logo1.jpg"
                 alt="NxtHyre Logo"
                 className="h-8 mr-2"
               />

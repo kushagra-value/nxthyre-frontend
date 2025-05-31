@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className="container mx-auto px-64 flex justify-between items-center">
           <Link to="/" className="flex items-center">
             <img
-              src="src\data\logo\NxtHyre-Logo.png"
+              src="/logo/NxtHyre-Logo.png"
               alt="NxtHyre Logo"
               className="h-20 w-20"
             />
