@@ -107,7 +107,7 @@ const JobListFilters = ({ onFilterChange }) => {
 
               <button
                 onClick={handleClearFilters}
-                className="text-sm text-gray-500 hover:text-purple-600 transition-colors duration-200"
+                className="text-sm text-gray-500 hover:text-blue-600 transition-colors duration-200"
               >
                 Clear all
               </button>
@@ -151,7 +151,7 @@ const JobListFilters = ({ onFilterChange }) => {
                 <input
                   id={`workMode-${workMode}`}
                   type="checkbox"
-                  className="w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500"
+                  className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-purple-500"
                   checked={filters.workModes.includes(workMode)}
                   onChange={() => handleWorkModeChange(workMode)}
                 />
@@ -196,7 +196,7 @@ const JobListFilters = ({ onFilterChange }) => {
                 <input
                   id={`department-${department}`}
                   type="checkbox"
-                  className="w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500"
+                  className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-purple-500"
                   checked={filters.departments.includes(department)}
                   onChange={() => handleDepartmentChange(department)}
                 />
@@ -249,7 +249,7 @@ const JobListFilters = ({ onFilterChange }) => {
                 <input
                   id={`location-${location}`}
                   type="checkbox"
-                  className="w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500"
+                  className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-purple-500"
                 />
                 <label
                   htmlFor={`location-${location}`}
@@ -318,7 +318,7 @@ const JobListFilters = ({ onFilterChange }) => {
               {["0-1", "1-3", "3-5", "5-10", "10+"].map((range) => (
                 <button
                   key={range}
-                  className="py-1 px-2 text-sm border border-gray-300 rounded-md hover:border-purple-500 hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-colors duration-200"
+                  className="py-1 px-2 text-sm border border-gray-300 rounded-md hover:border-purple-500 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-colors duration-200"
                 >
                   {range} years
                 </button>

@@ -19,7 +19,7 @@ const LoginPage = () => {
         <div className="flex items-center mb-8">
           <button
             onClick={() => navigate(-1)}
-            className="text-gray-600 hover:text-purple-600 transition-colors duration-200"
+            className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
           >
             <ArrowLeft className="h-6 w-6" />
           </button>
@@ -68,7 +68,7 @@ const LoginPage = () => {
               <input
                 type="checkbox"
                 id="remember"
-                className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
+                className="h-4 w-4 text-blue-600 focus:ring-purple-500 border-gray-300 rounded"
               />
               <label
                 htmlFor="remember"
@@ -79,7 +79,7 @@ const LoginPage = () => {
             </div>
             <Link
               to="/forgot-password"
-              className="text-sm font-medium text-purple-600 hover:text-purple-500"
+              className="text-sm font-medium text-blue-600 hover:text-purple-500"
             >
               Forgot password?
             </Link>
@@ -98,7 +98,7 @@ const LoginPage = () => {
             Don't have an account?{" "}
             <Link
               to="/register"
-              className="font-medium text-purple-600 hover:text-purple-500"
+              className="font-medium text-blue-600 hover:text-purple-500"
             >
               Sign up
             </Link>

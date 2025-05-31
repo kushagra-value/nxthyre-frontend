@@ -30,7 +30,7 @@ const RegisterPage = () => {
         <div className="flex items-center mb-8">
           <button
             onClick={() => navigate(-1)}
-            className="text-gray-600 hover:text-purple-600 transition-colors duration-200"
+            className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
           >
             <ArrowLeft className="h-6 w-6" />
           </button>
@@ -125,7 +125,7 @@ const RegisterPage = () => {
             Already have an account?{" "}
             <Link
               to="/login"
-              className="font-medium text-purple-600 hover:text-purple-500"
+              className="font-medium text-blue-600 hover:text-purple-500"
             >
               Sign in
             </Link>

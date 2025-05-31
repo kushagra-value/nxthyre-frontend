@@ -114,7 +114,7 @@ const ActiveHiring = () => {
                         </div>
                       </div>
 
-                      <div className="border-t border-gray-200 p-4 flex items-center justify-center text-sm text-purple-600 font-medium hover:text-purple-800 transition-colors duration-200">
+                      <div className="border-t border-gray-200 p-4 flex items-center justify-center text-sm text-blue-600 font-medium hover:text-purple-800 transition-colors duration-200">
                         View Jobs <ArrowRight className="ml-1 h-4 w-4" />
                       </div>
                     </Link>

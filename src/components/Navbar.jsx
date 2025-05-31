@@ -46,7 +46,7 @@ const Navbar = () => {
             <div className="flex space-x-6">
               <Link
                 to="/jobs"
-                className="text-gray-800 hover:text-purple-600 font-medium transition-colors duration-200"
+                className="text-gray-800 hover:text-blue-600 font-medium transition-colors duration-200"
               >
                 Jobs
               </Link>
@@ -55,7 +55,7 @@ const Navbar = () => {
             <div className="flex items-center space-x-8">
               <button
                 onClick={() => setShowPopup(true)}
-                className="text-gray-800 hover:text-purple-600 transition-colors duration-200 relative"
+                className="text-gray-800 hover:text-blue-600 transition-colors duration-200 relative"
                 aria-label="AI Resume Feature"
               >
                 <Sparkle className="h-6 w-6" />
@@ -100,7 +100,7 @@ const Navbar = () => {
             <div className="flex flex-col space-y-4">
               <Link
                 to="/jobs"
-                className="text-gray-800 hover:text-purple-600 font-medium transition-colors duration-200 py-2"
+                className="text-gray-800 hover:text-blue-600 font-medium transition-colors duration-200 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Jobs
@@ -111,7 +111,7 @@ const Navbar = () => {
                   setShowPopup(true);
                   setMobileMenuOpen(false);
                 }}
-                className="flex items-center text-gray-800 hover:text-purple-600 font-medium transition-colors duration-200 py-2"
+                className="flex items-center text-gray-800 hover:text-blue-600 font-medium transition-colors duration-200 py-2"
               >
                 <Sparkle className="h-5 w-5 mr-2" />
                 AI Resume Feature
@@ -119,7 +119,7 @@ const Navbar = () => {
 
               <Link
                 to="/login"
-                className="text-gray-800 hover:text-purple-600 font-medium transition-colors duration-200 py-2"
+                className="text-gray-800 hover:text-blue-600 font-medium transition-colors duration-200 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Login

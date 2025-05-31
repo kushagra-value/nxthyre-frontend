@@ -56,11 +56,11 @@ const CategoryTags = () => {
                   className="w-full h-16 bg-white rounded-lg shadow-md hover:shadow-lg p-4 flex items-center justify-start transition-all duration-200 group"
                 >
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center group-hover:from-blue-200 group-hover:to-purple-200 transition-colors duration-200">
-                    <span className="text-purple-600">
+                    <span className="text-blue-600">
                       {getIcon(category.icon)}
                     </span>
                   </div>
-                  <span className="ml-3 text-gray-800 font-medium group-hover:text-purple-600 transition-colors duration-200">
+                  <span className="ml-3 text-gray-800 font-medium group-hover:text-blue-600 transition-colors duration-200">
                     {category.name}
                   </span>
                 </button>
