@@ -9,6 +9,7 @@ const JobListFilters = ({ onFilterChange }) => {
     location: false,
     salary: false,
     companyType: false,
+    jobFeatures: false,
   });
 
   const [filters, setFilters] = useState({
@@ -18,6 +19,11 @@ const JobListFilters = ({ onFilterChange }) => {
     locations: [],
     salary: [0, 50], // Min and max salary in LPA
     companyTypes: [],
+    activelyHiring: false,
+    goodJobCulture: false,
+    visaSponsorship: false,
+    flexibleHours: false,
+    benefitsPackage: false, // New filter
   });
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -70,6 +76,15 @@ const JobListFilters = ({ onFilterChange }) => {
     onFilterChange(updatedFilters);
   };
 
+  const handleJobFeatureChange = (feature) => {
+    const updatedFilters = {
+      ...filters,
+      [feature]: !filters[feature],
+    };
+    setFilters(updatedFilters);
+    onFilterChange(updatedFilters);
+  };
+
   const handleClearFilters = () => {
     const clearedFilters = {
       departments: [],
@@ -78,6 +93,11 @@ const JobListFilters = ({ onFilterChange }) => {
       locations: [],
       salary: [0, 50],
       companyTypes: [],
+      activelyHiring: false,
+      goodJobCulture: false,
+      visaSponsorship: false,
+      flexibleHours: false,
+      benefitsPackage: false,
     };
 
     setFilters(clearedFilters);
@@ -91,7 +111,12 @@ const JobListFilters = ({ onFilterChange }) => {
     (filters.experience[0] > 0 || filters.experience[1] < 15 ? 1 : 0) +
     filters.locations.length +
     (filters.salary[0] > 0 || filters.salary[1] < 50 ? 1 : 0) +
-    filters.companyTypes.length;
+    filters.companyTypes.length +
+    (filters.activelyHiring ? 1 : 0) +
+    (filters.goodJobCulture ? 1 : 0) +
+    (filters.visaSponsorship ? 1 : 0) +
+    (filters.flexibleHours ? 1 : 0) +
+    (filters.benefitsPackage ? 1 : 0);
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -208,6 +233,101 @@ const JobListFilters = ({ onFilterChange }) => {
                 </label>
               </div>
             ))}
+          </div>
+        )}
+      </div>
+
+      {/* Job Features Filter */}
+      <div className="border-b border-gray-200">
+        <button
+          className="flex items-center justify-between w-full p-4 text-left"
+          onClick={() => toggleFilter("jobFeatures")}
+        >
+          <span className="font-bold text-gray-800">Job Features</span>
+          {expandedFilters.jobFeatures ? (
+            <ChevronUp className="h-5 w-5 text-gray-500" />
+          ) : (
+            <ChevronDown className="h-5 w-5 text-gray-500" />
+          )}
+        </button>
+
+        {expandedFilters.jobFeatures && (
+          <div className="px-4 pb-4">
+            <div className="flex items-center mb-2">
+              <input
+                id="activelyHiring"
+                type="checkbox"
+                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-purple-500"
+                checked={filters.activelyHiring}
+                onChange={() => handleJobFeatureChange("activelyHiring")}
+              />
+              <label
+                htmlFor="activelyHiring"
+                className="ml-2 text-sm text-gray-700"
+              >
+                Actively Hiring
+              </label>
+            </div>
+            <div className="flex items-center mb-2">
+              <input
+                id="goodJobCulture"
+                type="checkbox"
+                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-purple-500"
+                checked={filters.goodJobCulture}
+                onChange={() => handleJobFeatureChange("goodJobCulture")}
+              />
+              <label
+                htmlFor="goodJobCulture"
+                className="ml-2 text-sm text-gray-700"
+              >
+                Good Job Culture
+              </label>
+            </div>
+            <div className="flex items-center mb-2">
+              <input
+                id="visaSponsorship"
+                type="checkbox"
+                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-purple-500"
+                checked={filters.visaSponsorship}
+                onChange={() => handleJobFeatureChange("visaSponsorship")}
+              />
+              <label
+                htmlFor="visaSponsorship"
+                className="ml-2 text-sm text-gray-700"
+              >
+                Visa Sponsorship
+              </label>
+            </div>
+            <div className="flex items-center mb-2">
+              <input
+                id="flexibleHours"
+                type="checkbox"
+                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-purple-500"
+                checked={filters.flexibleHours}
+                onChange={() => handleJobFeatureChange("flexibleHours")}
+              />
+              <label
+                htmlFor="flexibleHours"
+                className="ml-2 text-sm text-gray-700"
+              >
+                Flexible Hours
+              </label>
+            </div>
+            <div className="flex items-center mb-2">
+              <input
+                id="benefitsPackage"
+                type="checkbox"
+                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-purple-500"
+                checked={filters.benefitsPackage}
+                onChange={() => handleJobFeatureChange("benefitsPackage")}
+              />
+              <label
+                htmlFor="benefitsPackage"
+                className="ml-2 text-sm text-gray-700"
+              >
+                Benefits Package
+              </label>
+            </div>
           </div>
         )}
       </div>
